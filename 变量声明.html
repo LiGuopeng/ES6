@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*报错
+ function func() {
+     var a = 10;
+     let a = 1;
+ }*/
+
+    /*报错
+     function func() {
+         let a = 10;
+         let a = 1;
+     }*/
+
+
+
+     /*不能在函数内部重新声明参数。
+function func(arg) {
+  //let arg; // 报错
+}
+
+function func(arg) {
+  {
+    let arg; // 不报错
+    console.log(arg)
+  }
+}
+func(123)*/
+
+
+    /* ES5 只有全局作用域和函数作用域，没有块级作用域
+    var tmp = new Date();
+    function f() {
+
+        console.log(tmp);
+        if (false) {
+            var tmp = 'hello world';
+        }
+    }
+
+    f(); // undefined*/
+
+
+
+    /*用来计数的循环变量泄露为全局变量
+    var s = 'hello';
+
+    for (var i = 0; i < s.length; i++) {
+        console.log(s[i]);
+    }
+
+    console.log(i); // 5  */
+</script>
+</html>
