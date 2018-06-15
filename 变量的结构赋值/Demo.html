@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*变量交换值
+    let x = 1;
+    let y = 2;
+
+    [x, y] = [y, x];*/
+
+    /*返回一个数组
+    function example() {
+        return [1, 2, 3];
+    }
+    let [a, b, c] = example();*/
+
+    /* 返回一个对象
+
+    function example() {
+        return {
+            foo: 1,
+            bar: 2
+        };
+    }
+    let { foo, bar } = example();*/
+
+    //函数参数的定义
+    /* 参数是一组有次序的值
+    function f([x, y, z]) {... }
+    f([1, 2, 3]);*/
+
+    /* 参数是一组无次序的值
+    function f({x, y, z}) {... }
+    f({z: 3, y: 2, x: 1});*/
+
+    /*提取 JSON 数据
+    let jsonData = {
+        id: 42,
+        status: "OK",
+        data: [867, 5309]
+    };
+
+    let { id, status, data: number } = jsonData;
+
+    console.log(id, status, number);*/
+
+    //加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰。
+    const { SourceMapConsumer, SourceNode } = require("source-map");
+
+
+</script>
+</body>
+</html>

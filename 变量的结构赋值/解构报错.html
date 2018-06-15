@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //解构会报错的情况  解构右边不是数组的情况下
+    //准确的来说右边数据结构 没有iterator接口(所谓的遍历接口) 就会报错
+    //以下数据结构没有iterator接口
+    let [foo] = 1;
+    let [foo] = false;
+    let [foo] = NaN;
+    let [foo] = undefined;
+    let [foo] = null;
+    let [foo] = {};
+
+
+
+</script>
+</body>
+</html>
