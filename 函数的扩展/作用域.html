@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //一旦设置了参数的默认值，函数进行声明初始化时，参数会形成一个单独的作用域（context）。
+    //等到初始化结束，这个作用域就会消失。
+    //这种语法行为，在不设置参数默认值时，是不会出现的。
+    /*var x = 1;
+    function f(x, y = x) {
+        console.log(y);
+    }
+    f(2) // 2
+    上面代码中，参数y的默认值等于变量x。调用函数f时，参数形成一个单独的作用域。
+    在这个作用域里面，默认值变量x指向第一个参数x，而不是全局变量x，所以输出是2。*/
+
+
+
+
+    /*let x = 1;
+    function f(y = x) {
+        let x = 2;
+        console.log(y);
+    }
+    f() // 1
+    上面代码中，函数f调用时，参数y = x形成一个单独的作用域。这个作用域里面，
+    变量x本身没有定义，所以指向外层的全局变量x。函数调用时，函数体内部的局部变量x影响不到默认值变量x。*/
+
+
+
+
+    /*
+    * 如果此时，全局变量x不存在，就会报错。
+        function f(y = x) {
+          let x = 2;
+          console.log(y);
+        }
+
+        f() // ReferenceError: x is not defined
+        */
+
+
+
+    /*
+        var x = 1;
+    function foo(x = x) {
+      // ...
+    }
+    foo() // ReferenceError: x is not defined
+    上面代码中，参数x = x形成一个单独作用域。实际执行的是let x = x，
+    由于暂时性死区的原因，这行代码会报错”x 未定义“。
+     */
+</script>
+</html>

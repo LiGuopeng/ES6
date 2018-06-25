@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+     let name='小王',age=17;
+     let obj={
+         name:'xa',
+         objAge:this.age,
+         myFun:function () {
+             console.log(this.name +" "+this.age)
+         }
+     }
+
+     var db={
+         name:"德玛西亚",
+         age:99,
+     }
+   /* console.log(obj.objAge);
+     console.log(obj.myFun());*/
+
+   /*  obj.myFun.call(db);　　　//德玛西亚99
+     obj.myFun.apply(db);　　　 //德玛西亚99
+     obj.myFun.bind(db)();　　　//德玛西亚99
+    // 以上出了bind 方法后面多了个 () 外 ，结果返回都一致！
+　//　由此得出结论，bind 返回的是一个新的函数，你必须调用它才会被执行  */
+
+
+   
+</script>
+</html>
